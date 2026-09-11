@@ -12,6 +12,7 @@ operational guidance").
 """
 from __future__ import annotations
 
+from backend.app.decision.explanation_llm import generate_llm_explanation
 from backend.app.schemas import AgentResponse, Decision, DecisionFactor, FinalDecision, Plan
 
 # --- placeholder thresholds, tune with P3 (weather) & P4 (geofence) --------
@@ -111,6 +112,17 @@ class DecisionEngine:
         suitability = self._suitability_score(sst, chlorophyll, wind_speed, wave_height, in_restricted_zone)
 
         summary = self._build_summary(label, factors)
+        # Optional: rephrase the deterministic summary via LLM if ANTHROPIC_API_KEY
+        # is set. Falls back to the deterministic `summary` above on any failure —
+        # see explanation_llm.py for why this is safe to call unconditionally.
+        llm_summary = generate_llm_explanation(
+            label=label,
+            factors=[f.model_dump() for f in factors],
+            deterministic_summary=summary,
+        )
+        if llm_summary:
+            summary = llm_summary
+
         recommended_actions = self._recommend_actions(label, wind_speed, wave_height)
         overall_confidence = round(sum(confidences) / len(confidences), 2) if confidences else 0.3
 
