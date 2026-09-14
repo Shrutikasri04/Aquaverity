@@ -1,0 +1,9 @@
+valid_date,lat,lon,pfz_score,status,sector,source
+2026-09-06,10.76,79.84,0.84,favourable,North Tamil Nadu,INCOIS PFZ demo placeholder
+2026-09-06,10.80,79.90,0.90,favourable,North Tamil Nadu,INCOIS PFZ demo placeholder
+2026-09-06,10.85,79.95,0.72,moderate,North Tamil Nadu,INCOIS PFZ demo placeholder
+2026-09-06,10.70,79.92,0.88,favourable,North Tamil Nadu,INCOIS PFZ demo placeholder
+2026-09-06,10.65,79.80,0.30,low,North Tamil Nadu,INCOIS PFZ demo placeholder
+2026-09-06,10.90,79.88,0.55,moderate,North Tamil Nadu,INCOIS PFZ demo placeholder
+2026-09-06,11.00,80.00,0.80,favourable,North Tamil Nadu,INCOIS PFZ demo placeholder
+2026-09-06,10.55,79.75,0.20,unfavourable,North Tamil Nadu,INCOIS PFZ demo placeholder

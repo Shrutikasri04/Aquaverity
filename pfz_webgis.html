@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>INCOIS-PFZ</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.css">
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/leafletdraw.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.browser.print/dist/leaflet.browser.print.min.js"></script>
+    <link rel="stylesheet" href="assets/css/Leaflet.NavBar.css" />
+    <script src="assets/js/Leaflet.NavBar.js"></script>
+    <script src="js/leafletdraw.js"></script>
+    <script src="js/geometryutil.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/turf.js"></script>
+    <script src="js/leaflet.timedimension.min.js"></script>
+    <script src="js/iso8601.min.js"></script>
+    <script src="js/leaflet-velocity.min.js"></script>
+    <link href="css/externalcss.css" rel="stylesheet">
+    <link href="css/threddsexternal.css" rel="stylesheet">
+    <link href="css/fontawesome.css" rel="stylesheet">
+    <link href="css/bootstarpicon.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/leaflet.timedimension.control.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="apple-touch-icon" href="/site/assets/images/favicon/apple-touch-icon.png">
+      <link rel="icon" href="/site/assets/images/logo.png">
+
+    <style>
+      /* ── CHL Legend at bottom-right ── */
+      #chl-legend-container {
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        z-index: 9999;
+        display: none;                  /* hidden until checkbox is ticked */
+        background: rgba(255,255,255,0.92);
+        border: 1px solid #aaa;
+        border-radius: 6px;
+        padding: 8px 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        max-width: 220px;
+      }
+      #chl-legend-container .legend-title {
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 6px;
+        text-align: center;
+        color: #333;
+      }
+      #chl-legend-container img {
+        display: block;
+        max-width: 100%;
+      }
+    </style>
+<!-- Matomo Script: Start -->
+<script src="/oceanservices/js/matomo_tracker.js"></script>
+<!-- Matomo Script: End -->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand visible-xs" href="#">
+            <img src="assets/img/logo2.png" alt="INCOIS Logo" style="height: 40px; margin-top: 0px;">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav">
+            <li>
+              <a style="font-size: 18px; font-weight: bold;">
+                &nbsp;&nbsp;<span class="hidden-xs">Potential Fishing Zone (PFZ) Advisory</span>
+                <center><span class="visible-xs pfz-mobile">Potential Fishing Zone (PFZ)</span></center>
+              </a>
+            </li>
+            <li>
+              <a href="#" id="about-btn">
+                <i class="fa fa-question-circle black"></i>&nbsp;&nbsp;About
+              </a>
+            </li>
+            <li>
+              <a href="#" id="list-btn">
+                <i class="fa fa-list black"></i>&nbsp;&nbsp;Layers
+              </a>
+            </li>
+          </ul>
+
+          <a class="navbar-brand hidden-xs" href="#" style="float: right !important;">
+            <img src="assets/img/logo.png" alt="INCOIS Logo" style="height: 40px;">
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="container">
+      <div id="sidebar">
+        <div class="sidebar-wrapper">
+          <div class="panel panel-default" id="features">
+            <div class="panel-body">
+              <div id="custom-control"></div>
+
+              <div class="pfz-tools" style="margin-top: 20px; margin-left: 5px; margin-right: 5px; display: flex; justify-content: space-between; align-items: center;">
+                <span style="position: absolute; left: 50%; transform: translateX(-50%); font-weight: bold;">
+                  Layers
+                </span>
+                <button id="hideSidebarBtn" title="Hide Sidebar" style="background: none; border: none; font-size: 16px; cursor: pointer;">
+                  <i class="fas fa-arrow-left"></i>
+                </button>
+              </div>
+
+              <div id="layerToggles" style="margin-top: 100px;">
+                <label for="SST_IO2" style="display: block; font-size: 13px; margin-bottom: 10px;">
+                  <input type="checkbox" id="SST_IO2" value="SST_IO2" onchange="toggleSST(this)"> Sea Surface Temperature
+                </label><br>
+
+                <!-- ★ Chlorophyll checkbox ★ -->
+                <label for="CURRENTS_IO" style="display: block; font-size: 13px; margin-bottom: 10px;">
+                  <input type="checkbox" id="CURRENTS_IO" value="CURRENTS_IO" onchange="toggleCHL(this)"> Chlorophyll
+                </label><br>
+
+                <label for="PFZ_LINES" style="display: block; font-size: 13px; margin-bottom: 10px;">
+                  <input type="checkbox" id="PFZ_LINES" value="PFZ_LINES" checked> PFZ Advisory
+                </label><br>
+                <label for="EEZ_LINES" style="display: block; font-size: 13px; margin-bottom: 10px;">
+                  <input type="checkbox" id="EEZ_LINES" value="EEZ_LINES" checked> EEZ
+                </label><br>
+                <label for="Sectors" style="display: block; font-size: 13px; margin-bottom: 10px;">
+                  <input type="checkbox" id="Sectors" value="Sectors" checked> Sectors
+                </label><br>
+                <label for="LandingCentres" style="display: block; font-size: 13px; margin-bottom: 10px;">
+                  <input type="checkbox" id="LandingCentres" value="LandingCentres" checked> LandingCentres
+                </label><br>
+                <label for="Bathymetry" style="display: block; font-size: 13px; margin-bottom: 10px;">
+                  <input type="checkbox" id="Bathymetry" value="Bathymetry"> Bathymetry
+                </label><br>
+              </div>
+
+              <div id="coordinates">Latitude:, Longitude:</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="map">
+        <div id="floatingTools">
+          <div id="printButtonContainer" title="Print Button">
+            <button class="print-map-btn" id="printButton">
+              <i class="fas fa-print"></i> <span class="button-text"></span>
+            </button>
+            <div id="legendButtonContainer" title="Legend Button">
+              <button class="full-list-btn" id="legendButton">
+                <i class="bi bi-list bi-bold" aria-hidden="true"></i>
+                <span class="button-text"></span>
+              </button>
+            </div>
+            <div id="legendDiv">
+              <img id="legendImage" alt="Legend" />
+            </div>
+            <div class="god-icon" id="toggleTools" title="Measurement Button">
+              <i class="fas fa-ruler-horizontal"></i>
+              <span class="button-text"></span>
+            </div>
+            <div class="tool-bar" id="toolBar" title="Measurement Button">
+              <button id="pointTool">
+                <img src="img/marker.PNG" alt="Point" />
+              </button>
+              <button id="lineTool">
+                <img src="img/line.PNG" alt="Line" />
+              </button>
+              <button id="polygonTool">
+                <img src="img/polygon.PNG" alt="Polygon" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Welcome to the Potential Fishing Zone</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs nav-justified" id="aboutTabs">
+              <li class="active"><a href="#about" data-toggle="tab"><i class="fa fa-question-circle"></i>&nbsp;About the project</a></li>
+              <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i>&nbsp;About us</a></li>
+            </ul>
+            <div class="tab-content" id="aboutTabsContent">
+              <div class="tab-pane fade active in" id="about">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Information</div>
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <img src="img/aboutpfz.png" alt="Information Image" class="img-responsive">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="contact">
+                <img src="img/aboutincois.png" alt="Information Image" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="legendContainer">
+      <h4>Legend</h4>
+      <img id="legendImage2" src="" alt="Legend Image">
+    </div>
+
+    <!-- SST Legend (bottom-right, offset left so it doesn't overlap CHL) -->
+<div id="sst-legend-container" style="
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    z-index: 9999;
+    display: none;
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    padding: 8px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    max-width: 150px;
+    max-height: 400px;           /* 👈 Add max height */
+    overflow-y: auto;            /* 👈 Add vertical scrollbar */
+    overflow-x: hidden;          /* 👈 Prevent horizontal scroll if needed */
+">
+    <div style="font-weight:bold; font-size:12px; margin-bottom:6px; text-align:center; color:#333; position: sticky; top: 0; background: rgba(255,255,255,0.95); padding: 4px 0;">
+        Sea Surface Temperature (°C)
+    </div>
+    <img src="/geoserver/PFZ-TUNA-SST-CHL/wms?SERVICE=WMS&VERSION=1.1.0&REQUEST=GetLegendGraphic&FORMAT=image/png&LAYER=PFZ-TUNA-SST-CHL:sst"
+         alt="SST Legend" style="display:block; max-width:100%; height: auto;" />
+</div>
+<!-- CHL Legend (bottom-right) -->
+<div id="chl-legend-container" style="
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    padding: 8px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    max-width: 220px;">
+    <div style="font-weight:bold; font-size:12px; margin-bottom:6px; text-align:center; color:#333;">
+        Chlorophyll (mg/m³)
+    </div>
+    <img src="/geoserver/PFZ-TUNA-SST-CHL/wms?SERVICE=WMS&VERSION=1.1.0&REQUEST=GetLegendGraphic&FORMAT=image/png&LAYER=PFZ-TUNA-SST-CHL:chl"
+         alt="CHL Legend" style="display:block; max-width:100%;" />
+</div>
+
+    <!-- Bathymetry Legend (bottom-right, shown only when Bathymetry is checked) -->
+    <div id="legend-container" style="
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      display: none;
+      z-index: 9999;
+    ">
+      <img
+        id="bathymetry-legend"
+        src="/geoserver/BathymteryImage/wms?REQUEST=GetLegendGraphic&FORMAT=image/png&LAYER=BathymteryImage:gebcobathymtery&STYLE=Gebco_Bathymetry"
+        alt="Bathymetry Legend"
+        style="border: 1px solid #ccc; background: white; padding: 5px;">
+    </div>
+
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js"></script>
+    <script src="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script src="js/measure.js"></script>
+    <script src="js/legend.js"></script>
+    <script src="js/print.js"></script>
+    <script src="js/icon.js"></script>
+    <script src="js/featureinfo.js"></script>
+    <script src="js/threddsdata.js"></script>
+    <script src="js/jsondata.js"></script>
+    <script src="js/layersinsidebar.js"></script>
+
+    <script>
+      /* ─────────────────────────────────────────
+         CHL WMS Layer + Legend Toggle
+         (map variable comes from app.js)
+      ───────────────────────────────────────── */
+      var chlLayer = L.tileLayer.wms("/geoserver/PFZ-TUNA-SST-CHL/wms", {
+        layers: "PFZ-TUNA-SST-CHL:chl",
+        format: "image/png",
+        transparent: true,
+        version: "1.1.0",
+        opacity: 0.85,
+        attribution: "INCOIS – Chlorophyll"
+      });
+
+      function toggleCHL(checkbox) {
+        var legendBox = document.getElementById("chl-legend-container");
+        if (checkbox.checked) {
+          map.addLayer(chlLayer);
+          legendBox.style.display = "block";
+        } else {
+          map.removeLayer(chlLayer);
+          legendBox.style.display = "none";
+        }
+      }
+    </script>
+
+    <script>
+      /* ── Prevent map scroll inside legend div ── */
+      const legendDiv = document.getElementById("legendDiv");
+      if (legendDiv) {
+        legendDiv.addEventListener("wheel", function (e) {
+          e.stopPropagation();
+        }, { passive: false });
+      }
+    </script>
+
+    <script>
+      /* ── Hide / Show sidebar ── */
+      document.getElementById("hideSidebarBtn").addEventListener("click", function () {
+        document.getElementById("sidebar").classList.add("hidden");
+      });
+      document.getElementById("list-btn").addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("sidebar").classList.remove("hidden");
+      });
+    </script>
+
+    <script>
+      /* ── Collapse navbar on mobile link click ── */
+      $(document).ready(function () {
+        $('.navbar-collapse ul li a').click(function () {
+          if ($('.navbar-toggle').is(':visible')) {
+            $('.navbar-collapse').collapse('hide');
+          }
+        });
+      });
+    </script>
+
+    <script>
+      /* ── Stop measurement toolbar from bubbling ── */
+      document.getElementById('toggleTools').addEventListener('click', function (event) {
+        event.stopPropagation();
+      });
+    </script>
+
+    <script>
+      /* ── Bathymetry legend toggle ── */
+      document.getElementById('Bathymetry').addEventListener('change', function () {
+        var legend = document.getElementById('legend-container');
+        legend.style.display = this.checked ? 'block' : 'none';
+      });
+    </script>
+
+  </body>
+</html>

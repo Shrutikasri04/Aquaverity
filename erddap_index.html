@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>ERDDAP - List of All Datasets</title>
+<link rel="shortcut icon" href="https://erddap.incois.gov.in/erddap/images/favicon.ico">
+<link href="https://erddap.incois.gov.in/erddap/images/erddap2.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<table class="compact nowrap" style="width:100%; background-color:#128CB5;">
+  <tr> 
+    <td style="text-align:center; width:80px;"><a rel="bookmark"
+      href="https://www.noaa.gov/"><img 
+      title="National Oceanic and Atmospheric Administration" 
+      src="https://erddap.incois.gov.in/erddap/images/noaab.png" alt="NOAA"
+      style="vertical-align:middle;"></a></td> 
+    <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
+      <strong>ERDDAP</strong>
+      <br><small><small><small>Easier access to scientific data</small></small></small>
+      </td> 
+    <td style="text-align:right; font-size:small;"> 
+       | <select name="language" size="1"
+  title="Select&#x20;the&#x20;language&#x20;for&#x20;all&#x20;web&#x20;pages&#x20;in&#x20;ERDDAP&#x2e;"  onchange="window.location.href='https://erddap.incois.gov.in/erddap/' + (this.selectedIndex == 0? '' : this[this.selectedIndex].value + '/') + 'info&#x2f;index&#x2e;html';" >
+<option value="en" selected="selected">English - English
+<option value="bn">&#x9ac;&#x9be;&#x982;&#x9b2;&#x9be; - Bengali
+<option value="zh-CN">&#x6c49;&#x8bed; - Chinese (Simplified)
+<option value="zh-TW">&#x6f22;&#x8a9e; - Chinese (Transitional)
+<option value="cs">&#x10c;e&#x161;tina - Czech
+<option value="da">Dansk - Danish
+<option value="nl">Nederlands - Dutch
+<option value="fi">Suomi - Finnish
+<option value="fr">Fran&ccedil;ais - French
+<option value="de">Deutsch - German
+<option value="el">&#x395;&#x3bb;&#x3bb;&#x3b7;&#x3bd;&#x3b9;&#x3ba;&#x3ac; - Greek
+<option value="hi">&#x939;&#x93f;&#x928;&#x94d;&#x926;&#x940; - Hindi
+<option value="hu">Magyar - Hungarian
+<option value="id">Bahasa Indonesia - Indonesian
+<option value="ga">Gaeilge - Irish
+<option value="it">Italiano - Italian
+<option value="ja">&#x65e5;&#x672c;&#x8a9e; - Japanese
+<option value="ko">&#xd55c;&#xad6d;&#xc5b4; - Korean
+<option value="no">Norsk - Norwegian
+<option value="pl">Polski - Polish
+<option value="pt">Portugu&ecirc;s - Portuguese
+<option value="ro">Rom&acirc;n&#x103; - Romanian
+<option value="ru">&#x420;&#x443;&#x441;&#x441;&#x43a;&#x438;&#x439; - Russian
+<option value="es">Espa&ntilde;ol - Spanish
+<option value="sv">Svenska - Swedish
+<option value="tl">Wikang Tagalog - Tagalog
+<option value="th">&#xe20;&#xe32;&#xe29;&#xe32;&#xe44;&#xe17;&#xe22; - Thai
+<option value="tr">T&uuml;rk&ccedil;e - Turkish
+<option value="uk">&#x423;&#x43a;&#x440;&#x430;&#x457;&#x43d;&#x441;&#x44c;&#x43a;&#x430; - Ukrainian
+<option value="ur">&#x627;&#x64f;&#x631;&#x62f;&#x64f;&#x648; - Urdu
+</select><img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<img src=&quot;https://erddap.incois.gov.in/erddap/images/TranslatedByGoogle.png&quot; alt=&quot;Translated by Google&quot;><br>TRANSLATION DISCLAIMER<br>&nbsp;<br>THIS SERVICE MAY CONTAIN TRANSLATIONS POWERED BY GOOGLE. GOOGLE<br>DISCLAIMS ALL WARRANTIES RELATED TO THE TRANSLATIONS, EXPRESS<br>OR IMPLIED, INCLUDING ANY WARRANTIES OF ACCURACY, RELIABILITY,<br>AND ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A<br>PARTICULAR PURPOSE AND NONINFRINGEMENT.<br>&nbsp;<br>The ERDDAP website has been translated for your convenience using translation<br>software powered by Google Translate. Reasonable efforts have been made to<br>provide an accurate translation, however, no automated translation is perfect<br>nor is it intended to replace human translators. Translations are provided<br>as a service to users of the ERDDAP website, and are provided &quot;as is.&quot;<br>No warranty of any kind, either expressed or implied, is made as to the<br>accuracy, reliability, or correctness of any translations made from English<br>into any other language. Some content (such as images, videos, etc.) may not<br>be accurately translated due to the limitations of the translation software.<br>&nbsp;<br>The official text is the English version of the website. Any discrepancies or<br>differences created in the translation are not binding and have no legal<br>effect for compliance or enforcement purposes. If any questions arise related<br>to the accuracy of the information contained in the translated website, refer<br>to the English version of the website which is the official version.')" onmouseout="UnTip()"  >
+ &nbsp; &nbsp;
+      <br>Brought to you by 
+      <a title="National Oceanic and Atmospheric Administration" rel="bookmark"
+      href="https://www.noaa.gov">NOAA</a>  
+      <a title="National Marine Fisheries Service" rel="bookmark"
+      href="https://www.fisheries.noaa.gov">NMFS</a>  
+      <a title="Southwest Fisheries Science Center" rel="bookmark"
+      href="https://www.fisheries.noaa.gov/about/southwest-fisheries-science-center">SWFSC</a> 
+      <a title="Environmental Research Division" rel="bookmark"
+      href="https://www.fisheries.noaa.gov/about/environmental-research-division-southwest-fisheries-science-center">ERD</a>  
+      &nbsp; &nbsp;
+      </td> 
+  </tr> 
+</table>
+<!-- Big HTML tooltips are generated with wz_tooltip from 
+    http://wztip.info/index.php/Main_Page (LGPL license) -->
+<script src="https://erddap.incois.gov.in/erddap/images/wz_tooltip.js"></script>
+
+<div class="standard_width">
+
+<h1 class="nowrap"><a title="Click here to return to the ERDDAP home page." 
+rel="start" href="https://erddap.incois.gov.in/erddap/index.html">ERDDAP</a> &gt; List of All Datasets</h1>
+17 matching datasets, listed in alphabetical order.
+<br>&nbsp;
+<table class="erd nowrap commonBGColor" >
+<tr>
+<th>Grid<br>DAP<br>Data
+<th>Sub-<br>set
+<th>Table<br>DAP<br>Data
+<th>Make<br>A<br>Graph
+<th>W<br>M<br>S
+<th>Source<br>Data<br>Files
+<th>Title
+<th>Sum-<br>mary
+<th>FGDC,<br>ISO,<br>Metadata
+<th>Back-<br>ground<br>Info
+<th>RSS
+<th>E<br>mail
+<th>Institution
+<th>Dataset ID
+</tr>
+<tr>
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/tabledap/allDatasets.subset" title="Click to select and view subsets of this dataset via faceted search." >set</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/tabledap/allDatasets.html" title="Click to see a tabledap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/tabledap/allDatasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;
+<td>&nbsp;
+<td>* The List of All Active Datasets in this ERDDAP *
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>This dataset is a table which has a row of information for each dataset currently active in this ERDDAP.<br><br>cdm_data_type = Other<br>VARIABLES:<br>datasetID (Dataset ID)<br>accessible<br>institution<br>dataStructure (Data Structure)<br>cdm_data_type (Common Data Model Type)<br>class (ERDDAP Class)<br>title<br>minLongitude (Minimum Longitude, degrees_east)<br>maxLongitude (Maximum Longitude, degrees_east)<br>longitudeSpacing (Average Grid Longitude Spacing, degrees_east)<br>minLatitude (Minimum Latitude, degrees_north)<br>maxLatitude (Maximum Latitude, degrees_north)<br>latitudeSpacing (Average Grid Latitude Spacing, degrees_north)<br>minAltitude (Minimum Altitude (or negative Depth), m)<br>maxAltitude (Maximum Altitude (or negative Depth), m)<br>minTime (Minimum Time, seconds since 1970-01-01T00:00:00Z)<br>maxTime (Maximum Time, seconds since 1970-01-01T00:00:00Z)<br>timeSpacing (Average Grid Time Spacing, seconds)<br>griddap (Base URL of OPeNDAP Grid Service)<br>subset (URL of Subset Web Page)<br>tabledap (Base URL of OPeNDAP Table/Sequence Service)<br>MakeAGraph (URL of Make-A-Graph Web Page)<br>sos (Base URL of SOS Service)<br>wcs (Base URL of WCS Service)<br>wms (Base URL of WMS Service)<br>files (Base URL of &quot;files&quot; Service)<br>... (10 more variables)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/allDatasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/allDatasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="https://erddap.incois.gov.in/erddap" title="Click to see background information from the source of this dataset." >background</a>
+<td>&nbsp;
+<td>&nbsp;
+<td>INCOIS
+<td>allDatasets
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/AMSRE_MONTHLY_GLOBAL.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/AMSRE_MONTHLY_GLOBAL.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/AMSRE_MONTHLY_GLOBAL/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>AMSRE Monthly Global Data
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>AMSRE Monthly Global Data<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][latitude][longitude]):<br>SST (Sea Surface Temperature, Degree C)<br>WSPD_LF (Wind speed using 10.7 GHz channel, m/s)<br>WSPD_MF (Wind speed using 18.7 GHz channel, m/s)<br>VAPOR (Columnar atmospheric water vapor, mm)<br>CLOUD (Columnar cloud liquid water, mm)<br>RAIN (Rain Rate, mm/hr)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/AMSRE_MONTHLY_GLOBAL_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/AMSRE_MONTHLY_GLOBAL_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/AMSRE_MONTHLY_GLOBAL/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/AMSRE_MONTHLY_GLOBAL.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=AMSRE_MONTHLY_GLOBAL&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>AMSRE_MONTHLY_GLOBAL
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/ascat_daily_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/ascat_daily_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/ascat_daily_datasets/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>Daily ASCAT global wind field
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>Daily Advanced SCATterometer (ASCAT) global wind field. ifremer data from a local source.<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][depth][latitude][longitude]):<br>wind_speed (m/s)<br>eastward_wind (eastward wind speed, m/s)<br>northward_wind (northward wind speed, m/s)<br>wind_stress (Pa)<br>surface_downward_eastward_stress (eastward wind stress, Pa)<br>surface_downward_northward_stress (northward wind stress, Pa)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/ascat_daily_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/ascat_daily_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/ascat_daily_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="https://wwz.ifremer.fr/" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/ascat_daily_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=ascat_daily_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>ifremer
+<td>ascat_daily_datasets
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/NOAA_AVHRR_AMSR_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/NOAA_AVHRR_AMSR_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/NOAA_AVHRR_AMSR_datasets/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>Daily-OI-V2, final, Data (Ship, Buoy, AMSR-E, AVHRR, GSFC-ice)
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>NOAA High Resolution SST AVHRR AMSR (data provided by the NOAA OAR ESRL)<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][zlev][latitude][longitude]):<br>sst (Daily sea surface temperature, degrees C)<br>anom (Daily sea surface temperature anomalies, degrees C)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/NOAA_AVHRR_AMSR_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/NOAA_AVHRR_AMSR_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/NOAA_AVHRR_AMSR_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="https://www.nasa.gov/centers/goddard/home/index.html" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/NOAA_AVHRR_AMSR_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=NOAA_AVHRR_AMSR_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>NOAA_AVHRR_AMSR_datasets
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_10day_McCreary.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_10day_McCreary.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_argo_10day_McCreary/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS ARGO 10 Day data Kessler-McCreary Methodology
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS ARGO 10 Day data Kessler-McCreary Methodology<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][ZAX][latitude][longitude]):<br>S_ANALYZED (Objectively Analyzed Salinity, PSU)<br>S_MEAN (Statistical Mean Salinity, PSU)<br>S_STDEV (Salinity Standard Deviation wrt analyzed mean, psu)<br>S_RMSE (Salinity RMSE wrt analyzed mean, PSU)<br>S_ROIOBS (No of Salinity values with in ROI, PSU)<br>S_BOXOBS (No of Salinity values with in 1x1 box, PSU)<br>T_ANALYZED (Objectively Analyzed Temperature, degs)<br>T_MEAN (Statistical Mean Temperature, degs)<br>T_STDEV (Temperature Standard Deviation wrt analyzed mean, degs)<br>T_RMSE (Temperature RMSE wrt analyzed mean, degs)<br>T_ROIOBS (No of Temperature values with in ROI)<br>T_BOXOBS (No of Temperature values with in 1x1 box)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_argo_10day_McCreary_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_argo_10day_McCreary_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_argo_10day_McCreary/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_argo_10day_McCreary.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_argo_10day_McCreary&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_argo_10day_McCreary
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_10d_VAM.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_10d_VAM.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_argo_10d_VAM/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS ARGO 10 day data Variational Analysis Methodology
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS ARGO 10 day data Variational Analysis Methodology<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][ZAX][latitude][longitude]):<br>TEMP (Temperature, degs)<br>TERR (Temp relative Error, degs)<br>SAL (Salinity, PSU)<br>SERR (Sal relative Error, PSU)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_argo_10d_VAM_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_argo_10d_VAM_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_argo_10d_VAM/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_argo_10d_VAM.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_argo_10d_VAM&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_argo_10d_VAM
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_mnt_McCreary.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_mnt_McCreary.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_argo_mnt_McCreary/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS ARGO Monthly data Kessler-McCreary Methodology
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS ARGO Monthly data Kessler-McCreary Methodology<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][ZAX][latitude][longitude]):<br>S_ANALYZED (Objectively Analyzed Salinity, PSU)<br>S_MEAN (Statistical Mean Salinity, PSU)<br>S_STDEV (Salinity Standard Deviation wrt analyzed mean, psu)<br>S_RMSE (Salinity RMSE wrt analyzed mean, PSU)<br>S_ROIOBS (No of Salinity values with in ROI, PSU)<br>S_BOXOBS (No of Salinity values with in 1x1 box, PSU)<br>T_ANALYZED (Objectively Analyzed Temperature, degs)<br>T_MEAN (Statistical Mean Temperature, degs)<br>T_STDEV (Temperature Standard Deviation wrt analyzed mean, degs)<br>T_RMSE (Temperature RMSE wrt analyzed mean, degs)<br>T_ROIOBS (No of Temperature values with in ROI)<br>T_BOXOBS (No of Temperature values with in 1x1 box)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_argo_mnt_McCreary_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_argo_mnt_McCreary_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_argo_mnt_McCreary/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_argo_mnt_McCreary.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_argo_mnt_McCreary&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_argo_mnt_McCreary
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_mnt_VAM.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_mnt_VAM.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_argo_mnt_VAM/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS ARGO Monthly data Variational Analysis Methodology
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS ARGO Monthly data Variational Analysis Methodology<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][ZAX][latitude][longitude]):<br>TEMP (Temperature, degs)<br>TERR (Temp relative Error, degs)<br>SAL (Salinity, PSU)<br>SERR (Sal relative Error, PSU)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_argo_mnt_VAM_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_argo_mnt_VAM_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_argo_mnt_VAM/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_argo_mnt_VAM.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_argo_mnt_VAM&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_argo_mnt_VAM
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_sst_weekly.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_argo_sst_weekly.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_argo_sst_weekly/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS argo SST data Weekly
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS argo SST data Weekly<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][latitude][longitude]):<br>ASST (IF(ANALYZED_FIELD GE 0) THEN ANALYZED_FIELD)<br>ERR (IF(ERROR_FIELD GE 0) THEN ERROR_FIELD)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_argo_sst_weekly_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_argo_sst_weekly_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_argo_sst_weekly/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_argo_sst_weekly.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_argo_sst_weekly&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_argo_sst_weekly
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_oceansat2_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_oceansat2_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_oceansat2_datasets/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS Oceansat 2 OCM Data
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS Oceansat 2 OCM Data<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][latitude][longitude]):<br>CHL (chlorophyll-a, mg/m3)<br>KD490 (Diffuse Attenuation Coefficient, meter-1)<br>TSM (Total Suspended Matter, mg/L)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_oceansat2_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_oceansat2_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_oceansat2_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_oceansat2_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_oceansat2_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_oceansat2_datasets
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_quickscat_daily_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_quickscat_daily_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_quickscat_daily_datasets/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS Quickscat Daily Data
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS Quickscat Daily Data<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][latitude][longitude]):<br>WIND_SPEED (wind speed module, m/s)<br>ZONAL_WIND_SPEED (zonal wind speed component, m/s)<br>MERI_WIND_SPEED (meridional wind speed component, m/s)<br>WIND_STRESS (wind stress magnitude, Pa)<br>ZONAL_WIND_STRESS (zonal wind stress component, Pa)<br>MERI_WIND_STRESS (meridional wind stress component, Pa)<br>WIND_STRESS_CURL (Pa/m)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_quickscat_daily_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_quickscat_daily_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_quickscat_daily_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_quickscat_daily_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_quickscat_daily_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_quickscat_daily_datasets
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_quickscat_mnt_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_quickscat_mnt_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_quickscat_mnt_datasets/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS Quickscat Monthly Data
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS Quickscat Monthly Data<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][latitude][longitude]):<br>WIND_SPEED (wind speed module, meters per second)<br>ZONAL_WIND_SPEED (zonal wind speed component, meters per second)<br>MERIDIONAL_WIND_SPEED (meridional wind speed component, meters per second)<br>WIND_STRESS (wind stress magnitude, pascals)<br>ZONAL_WIND_STRESS (zonal wind stress component, pascals)<br>MERIDIONAL_WIND_STRESS (meridional wind stress component, pascals)<br>WIND_STRESS_CURL (pascals per meter)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_quickscat_mnt_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_quickscat_mnt_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_quickscat_mnt_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_quickscat_mnt_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_quickscat_mnt_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_quickscat_mnt_datasets
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_tmi_3day_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_tmi_3day_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/incois_tmi_3day_datasets/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>INCOIS TMI 3Day Data
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS TMI 3Day Data<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][latitude][longitude]):<br>SST (Sea Surface Temperature, Degree C)<br>WSPD_LF (Wind speed using 10.7 GHz channel, m/s)<br>WSPD_MF (Wind speed using 18.7 GHz channel, m/s)<br>VAPOR (Columnar atmospheric water vapor, mm)<br>CLOUD (Columnar cloud liquid water, mm)<br>RAIN (Rain Rate, mm/hr)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_tmi_3day_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_tmi_3day_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_tmi_3day_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_tmi_3day_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_tmi_3day_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_tmi_3day_datasets
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_valueadded_products_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/incois_valueadded_products_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;
+<td>&nbsp;
+<td>INCOIS Value Added Products
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INCOIS Value Added Products<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][latitude][longitude]):<br>MLD (Mixed Layer Depth (mts))<br>ILD (Isothermal Layer Depth (mts))<br>D26 (Depth of 26 Isotherm (mts))<br>D20 (Depth of 20 Isotherm (mts))<br>HTCNT (Heat Content Upto 300m *1E-08 (Jm^2))<br>DYN_HT (Dynamic Height(dyn-cm))<br>GEO_U (Geostrophic U (cm/sec))<br>GEO_V (Geostrophic V (cm/sec))<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/incois_valueadded_products_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/incois_valueadded_products_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/incois_valueadded_products_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/incois_valueadded_products_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=incois_valueadded_products_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>incois_valueadded_products_datasets
+</tr>
+<tr>
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/tabledap/Indian_ARGO_Floats.subset" title="Click to select and view subsets of this dataset via faceted search." >set</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/tabledap/Indian_ARGO_Floats.html" title="Click to see a tabledap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/tabledap/Indian_ARGO_Floats.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;
+<td>&nbsp;
+<td>INDIAN ARGO Floats Data
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>INDIAN ARGO Floats Data<br><br>cdm_data_type = Point<br>VARIABLES:<br>DATE_CREATION (Date of file creation)<br>DATE_UPDATE (Date of update of this file)<br>PLATFORM_NUMBER (Float unique identifier)<br>CYCLE_NUMBER (Float cycle number)<br>DIRECTION (Direction of the station profiles)<br>PLATFORM_TYPE<br>time (Julian day (UTC) of the station relative to REFERENCE_DATE_TIME, seconds since 1970-01-01T00:00:00Z)<br>JULD_QC (Quality on date and time)<br>JULD_LOCATION (Julian day (UTC) of the location relative to REFERENCE_DATE_TIME, seconds since 1970-01-01T00:00:00Z)<br>latitude (Latitude of the station, best estimate, degrees_north)<br>longitude (Longitude of the station, best estimate, degrees_east)<br>PRES (Sea water pressure, equals 0 at sea-level, decibar)<br>PRES_QC (quality flag)<br>PRES_ADJUSTED (Sea water pressure, equals 0 at sea-level, decibar)<br>PRES_ADJUSTED_QC (quality flag)<br>TEMP (Sea temperature in-situ ITS-90 scale, degree_Celsius)<br>TEMP_QC (quality flag)<br>TEMP_ADJUSTED (Sea temperature in-situ ITS-90 scale, degree_Celsius)<br>TEMP_ADJUSTED_QC (quality flag)<br>PSAL (Practical salinity, PSU)<br>PSAL_QC (quality flag)<br>PSAL_ADJUSTED (Practical salinity, PSU)<br>PSAL_ADJUSTED_QC (quality flag)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/Indian_ARGO_Floats_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/Indian_ARGO_Floats_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/Indian_ARGO_Floats/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="http://www.incois.gov.in" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/Indian_ARGO_Floats.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=Indian_ARGO_Floats&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>Indian_ARGO_Floats
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/IRS_chlorophyll_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/IRS_chlorophyll_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/IRS_chlorophyll_datasets/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>IRS P4 OCM-Chlorophyll
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>IRS P4 OCM-Chlorophyll<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][latitude][longitude]):<br>CHLOROPHYLL (IRS P4 OCM-Chlorophyll, mg/m^3)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/IRS_chlorophyll_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/IRS_chlorophyll_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/IRS_chlorophyll_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="???" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/IRS_chlorophyll_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=IRS_chlorophyll_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>INCOIS
+<td>IRS_chlorophyll_datasets
+</tr>
+<tr>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/ascat_mnt_datasets.html" title="Click to see a griddap Data Access Form for this dataset so that you can request data." >data</a>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td> &nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/griddap/ascat_mnt_datasets.graph" title="Click to see Make A Graph for this dataset." >graph</a>
+<td>&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/wms/ascat_mnt_datasets/index.html" title="Click to find out about making maps of this data via this dataset's Web Map Service." >M</a>&nbsp;
+<td>&nbsp;
+<td>Monthly ASCAT global wind field
+<td>&nbsp;&nbsp;&nbsp;<img src="https&#x3a;&#x2f;&#x2f;erddap&#x2e;incois&#x2e;gov&#x2e;in&#x2f;erddap&#x2f;images&#x2f;QuestionMark&#x2e;png" alt="&#x3f;" onmouseover="Tip('<div class=&quot;standard_max_width&quot;>Monthly Advanced SCATterometer (ASCAT) global wind field<br><br>cdm_data_type = Grid<br>VARIABLES (all of which use the dimensions [time][depth][latitude][longitude]):<br>wind_speed (m/s)<br>eastward_wind (eastward wind speed, m/s)<br>northward_wind (northward wind speed, m/s)<br>wind_stress (Pa)<br>surface_downward_eastward_stress (eastward wind stress, Pa)<br>surface_downward_northward_stress (northward wind stress, Pa)<br></div>')" onmouseout="UnTip()"  >
+
+<td>
+&nbsp;&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/fgdc/xml/ascat_mnt_datasets_fgdc.xml" title="Click&#x20;to&#x20;download&#x20;FGDC&#x20;metadata&#x2e;" >F</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/metadata/iso19115/xml/ascat_mnt_datasets_iso19115.xml" title="Click&#x20;to&#x20;download&#x20;ISO&#x20;19115&#x2d;2&#x2f;19139&#x20;metadata&#x2e;" >&nbsp;I&nbsp;</a>
+&nbsp;<a rel="chapter" href="https://erddap.incois.gov.in/erddap/info/ascat_mnt_datasets/index.html" title="Click to see a list of this dataset's variables and the complete list of metadata attributes." >M</a>
+&nbsp;
+<td><a rel="bookmark" href="https://wwz.ifremer.fr/" title="Click to see background information from the source of this dataset." >background<img
+    src="https://erddap.incois.gov.in/erddap/images/external.png" alt=" (external link)"
+    title="This link to an external website does not constitute an endorsement."></a>
+<td><a rel="alternate" type="application/rss+xml"   href="https://erddap.incois.gov.in/erddap/rss/ascat_mnt_datasets.rss" 
+  title=""><img alt="RSS"
+    title="Subscribe to the RSS feed for this dataset..." 
+    src="https://erddap.incois.gov.in/erddap/images/rss.gif" ></a>
+<td><a rel="alternate" 
+  href="https://erddap.incois.gov.in/erddap/subscriptions/add.html?datasetID=ascat_mnt_datasets&amp;showErrors=false&amp;email=" 
+  title=""><img alt="Subscribe"
+    title="Get&#x20;an&#x20;email&#x20;immediately&#x20;whenever&#x20;this&#x20;dataset&#x20;changes&#x2e;&#x2e;&#x2e;" 
+    src="https://erddap.incois.gov.in/erddap/images/envelope.gif" ></a>
+<td>ifremer
+<td>ascat_mnt_datasets
+</tr>
+</table>
+
+<p>The information in the table above is also available in other file formats 
+(.csv, .htmlTable, .itx, .json, .jsonlCSV1, .jsonlCSV, .jsonlKVP, .mat, .nc, .nccsv, .tsv, .xhtml) <a rel="help" href="https://erddap.incois.gov.in/erddap/rest.html">via a RESTful web service</a>.
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "DataCatalog",
+  "name": "ERDDAP Data Server at INCOIS",
+  "url": "https://erddap.incois.gov.in/erddap",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INCOIS",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "INDIA",
+      "addressLocality": "KKP, Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500090"
+    },
+    "telephone": "+918977386942",
+    "email": "devender.raju@incois.gov.in",
+    "sameAs": "https://www.incois.gov.in"
+  },
+  "fileFormat": [
+    "application/geo+json",
+    "application/json",
+    "text/csv"
+  ],
+  "isAccessibleForFree": "True",
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "name": "AMSRE Monthly Global Data",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/AMSRE_MONTHLY_GLOBAL/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "Daily ASCAT global wind field",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/ascat_daily_datasets/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "Daily-OI-V2, final, Data (Ship, Buoy, AMSR-E, AVHRR, GSFC-ice)",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/NOAA_AVHRR_AMSR_datasets/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS ARGO 10 Day data Kessler-McCreary Methodology",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_argo_10day_McCreary/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS ARGO 10 day data Variational Analysis Methodology",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_argo_10d_VAM/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS ARGO Monthly data Kessler-McCreary Methodology",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_argo_mnt_McCreary/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS ARGO Monthly data Variational Analysis Methodology",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_argo_mnt_VAM/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS argo SST data Weekly",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_argo_sst_weekly/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS Oceansat 2 OCM Data",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_oceansat2_datasets/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS Quickscat Daily Data",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_quickscat_daily_datasets/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS Quickscat Monthly Data",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_quickscat_mnt_datasets/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS TMI 3Day Data",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_tmi_3day_datasets/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INCOIS Value Added Products",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/incois_valueadded_products_datasets/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "INDIAN ARGO Floats Data",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/Indian_ARGO_Floats/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "IRS P4 OCM-Chlorophyll",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/IRS_chlorophyll_datasets/index.html"
+    },
+    {
+      "@type": "Dataset",
+      "name": "Monthly ASCAT global wind field",
+      "sameAs": "https://erddap.incois.gov.in/erddap/info/ascat_mnt_datasets/index.html"
+    }
+  ]
+}
+</script>
+</div>
+<div class="standard_width"> 
+<br>&nbsp;
+<hr>
+ERDDAP, Version 2.30.0
+<br><a rel="license" href="https://erddap.incois.gov.in/erddap/legal.html">Disclaimers</a> | 
+    <a rel="bookmark" href="https://erddap.incois.gov.in/erddap/legal.html#privacyPolicy">Privacy Policy</a> |
+    <a rel="bookmark" href="https://erddap.incois.gov.in/erddap/legal.html#contact">Contact</a>
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;
+</div> 
+</body>
+</html>

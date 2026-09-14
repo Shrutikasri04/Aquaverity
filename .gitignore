@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+.vscode/
+.idea/
+
+data/copernicus_cache/
+data/copernicus_anomaly_cache/
+*.nc
+
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
