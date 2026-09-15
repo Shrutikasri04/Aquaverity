@@ -11,35 +11,28 @@ from __future__ import annotations
 import logging
 import uuid
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime
 
-from backend.app.agents import mock_agents
+from backend.app.agents import mock_agents, real_agents
 from backend.app.schemas import AgentResponse, Plan, Task
 
 logger = logging.getLogger("orca.orchestrator")
 
 
 def _run_weather(task: Task, task_id: str) -> AgentResponse:
+    """Now calls P3's real weather-safety service (see real_agents.py)."""
     p = task.params
-    return mock_agents.get_marine_forecast(
+    return real_agents.call_weather_safety_service(
         lat=p["lat"],
         lon=p["lon"],
-        start=datetime.fromisoformat(p["start"]),
-        end=datetime.fromisoformat(p["end"]),
+        target_time=p["start"],  # P3's API takes one target_time, not a window
         task_id=task_id,
     )
 
 
 def _run_ocean(task: Task, task_id: str) -> AgentResponse:
+    """Now calls P2's real ocean-intelligence service (see real_agents.py)."""
     p = task.params
-    return mock_agents.get_ocean_conditions(
-        lat=p["lat"],
-        lon=p["lon"],
-        variables=p["variables"],
-        start=datetime.fromisoformat(p["start"]),
-        end=datetime.fromisoformat(p["end"]),
-        task_id=task_id,
-    )
+    return real_agents.call_ocean_service(lat=p["lat"], lon=p["lon"], task_id=task_id)
 
 
 def _run_geospatial(task: Task, task_id: str) -> AgentResponse:
