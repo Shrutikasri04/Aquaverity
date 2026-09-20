@@ -1,3 +1,5 @@
 pydantic>=2.6
 python-dateutil>=2.8
 requests>=2.31
+fastapi>=0.110
+uvicorn>=0.29
